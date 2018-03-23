@@ -12,7 +12,8 @@
   "scripts": {
     "lint": "aegir lint",
     "build": "aegir build",
-    "build-proto": "pbjs --wrap commonjs --target static-module src/keys/keys.proto > src/keys/keys.proto.js",
+    "build-proto":
+      "pbjs --wrap commonjs --target static-module src/keys/keys.proto > src/keys/keys.proto.js",
     "test": "aegir test",
     "test:node": "aegir test -t node",
     "test:browser": "aegir test -t browser -t webworker",
@@ -21,12 +22,7 @@
     "release-major": "aegir release --type major",
     "coverage": "aegir coverage --ignore src/keys/keys.proto.js"
   },
-  "keywords": [
-    "IPFS",
-    "libp2p",
-    "crypto",
-    "rsa"
-  ],
+  "keywords": ["IPFS", "libp2p", "crypto", "rsa"],
   "author": "Friedel Ziegelmayer <dignifiedquire@gmail.com>",
   "license": "MIT",
   "dependencies": {
@@ -45,17 +41,15 @@
     "webcrypto-shim": "github:dignifiedquire/webcrypto-shim#master"
   },
   "devDependencies": {
-    "aegir": "^12.4.0",
+    "aegir": "stratumn/aegir#master",
+    "babel-preset-es2015": "^6.24.1",
     "benchmark": "^2.1.4",
     "chai": "^4.1.2",
     "chai-string": "^1.4.0",
     "dirty-chai": "^2.0.1",
     "pre-commit": "^1.2.2"
   },
-  "pre-commit": [
-    "lint",
-    "test"
-  ],
+  "pre-commit": ["lint", "test"],
   "engines": {
     "node": ">=6.0.0",
     "npm": ">=3.0.0"
